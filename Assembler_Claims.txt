@@ -1,0 +1,200 @@
+/*****************************************************************************
+TITLE: Claims                                                                                                                               
+AUTHOR: VENKATA BHUVAN KOSURU
+ID: 2301AI33
+
+Declaration of Authorship
+This txt file, claims.txt, is part of the assignment of CS2102 at the 
+department of Computer Science and Engineering, IIT Patna . 
+*****************************************************************************/
+
+==========
+Files:
+==========
+*All the files I submitted, asm.cpp and Assembler_Claims.txt, have my name and student id at the start, along with a declaration of authorship.
+
+The evidence for Assembler including the output files from the SEVEN test examples given (test1 to test3), (new1 to new3) and BUBBLE_SORT has also been uploaded. They are test1(3 output files), test2(2 output file), test3(3 output files), 
+new1(3 output files),new2(3 output files),new3(3 output files) and BUBBLE_SORT(3 output files). 
+
+All the test files have been tested and work properly. 
+
+
+=========================
+Compilation instructions:
+=========================
+    
+Windows:
+    g++ asm.cpp -o asm
+    ./asm filename.asm
+    for machine code in hex format :- Format-Hex -Path .\filename.o 
+
+
+=============================
+Program format and structure:
+=============================
+
+The assembler:
+    
+    * Written in C++ Language
+
+    * Every instruction (including the SET instruction) is implemented.
+
+    * It contains a table of instruction names and expected operands.
+
+    * asm.cpp is the main and only file of my assembler
+
+    * It is a 2 pass assembler (implemented in asm.cpp)
+    
+    * outputs the required correct information in the form of 3 things :
+       *  the errors and warnings on terminal as well as log file if not assembled properly.
+       *  .l file for listing [ its empty if errors have occurred in the code ]
+       *  .o file for machine code 
+
+    * All important errors are diagnosed along with thier line numbers ( unknown instruction , no such label , duplicate label )
+
+    * Along with errors it also generates Warnings whenever there is a label declared but has not been used in the code.
+  
+    * Comments or self descriptive variable names have been used.
+
+    * Advanced Listing File gets generated that is bytes of instruction along with that instructions mnemonics .
+
+    * The Assembler is capable of understanding the values given in decimal , octal or hexadecimal format.
+
+    * SET instruction is also implemented. The breakage of SET into different instructions for implementation can be found in the code     along with comments.
+
+    * Assembler successfully skips empty lines and comments
+
+
+
+===========================================
+Testing: (using a windows machine)
+===========================================
+The assembler:
+
+I have tested  6 test cases(3 example from doc , 2 own test files and bubblesort) shown as bellow. The errors only occurred in the file test2.asm and the program immediately stopped on the second pass displaying errors in the 
+
+The others were tested without any errors detected and produced listing file and machine readable object file, for each example.
+
+
+1)
+
+#Input:  g++ asm.cpp -o asm
+         ./asm test1.asm
+#Output:
+ 
+1. Warning: Unused Label at line 2
+2. Warning: Unused Label at line 8
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compiled without errors!!!
+Logs generated in: test1.txt
+Machine code generated in: test1.o
+Listing generated in: test1.lst
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+2)
+
+#Input: g++ asm.cpp -o asm
+        ./asm test2.asm
+
+#Output: 
+
+Failed to Assemble!!
+1. ERROR:Label Repeated at line 4
+2. ERROR:Wrong Syntax at line 6
+3. ERROR:Missing operand at line 7
+4. ERROR:Extra Operand at line 8
+5. ERROR:Extra operand at line 9
+6. ERROR:Wrong Format of Label at line 10
+7. ERROR:Wrong Syntax at line 11
+8. ERROR:Wrong Syntax at line 12
+9. ERROR:Undeclared Label nonesuch
+10. Warning: Unused Label at line 3
+11. Warning: Unused Label at line 4
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Logs generated in: test2.txt
+Listing generated in: test2.lst(it remains blank as per our code )
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+                                                                                    
+
+3)
+
+#Input: g++ asm.cpp -o asm
+        ./asm test3.asm
+
+#Output: 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compiled without errors!!!
+Logs generated in: test3.txt
+Machine code generated in: test3.o
+Listing generated in: test3.lst
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+4)
+
+#Input:  g++ asm.cpp -o asm
+        ./asm new1.asm
+
+#Output: 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compiled without errors!!!
+Logs generated in: new1.txt
+Machine code generated in: new1.o
+Listing generated in: new1.lst
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+5)
+
+#Input:  g++ asm.cpp -o asm
+        ./asm new2.asm
+
+#Output: 
+
+1. Warning: Unused Label at line 7
+2. Warning: Unused Label at line 22
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compiled without errors!!!
+Logs generated in: new2.txt
+Machine code generated in: new2.o
+Listing generated in: new2.lst
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+6)
+
+#Input: g++ asm.cpp -o asm
+        ./asm new3.asm
+
+#Output: 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compiled without errors!!!
+Logs generated in: new3.txt
+Machine code generated in: new3.o
+Listing generated in: new3.lst
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+7)
+
+#Input: g++ asm.cpp -o asm
+        ./asm BUBBLE_SORT.asm
+
+#Output: 
+
+1. Warning: Unused Label at line 25
+2. Warning: Unused Label at line 36
+3. Warning: Unused Label at line 53
+4. Warning: Unused Label at line 66
+5. Warning: Unused Label at line 73
+6. Warning: Unused Label at line 83
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compiled without errors!!!
+Logs generated in: BUBBLE_SORT.txt
+Machine code generated in: BUBBLE_SORT.o
+Listing generated in: BUBBLE_SORT.lst
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

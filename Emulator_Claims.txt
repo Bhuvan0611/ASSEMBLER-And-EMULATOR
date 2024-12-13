@@ -1,0 +1,43 @@
+/*****************************************************************************
+TITLE: Claims																																
+AUTHOR: VENKATA BHUVAN KOSURU
+ID    : 2301AI33
+Declaration of Authorship
+This txt file, claims.txt, is part of the assignment of CS2102 at the 
+department of Computer Science and Engg, IIT Patna . 
+*****************************************************************************/
+
+Files:
+==========
+*All the files I submitted, emu.cpp and claims_emu.txt, have my name and student id at the start, along with a declaration of 
+authorship.
+
+* Files included are , emu.cpp,test1.o , test3.o,(new1.o to new3.o)and  BUBBLE_SORT.o ,
+
+Compilation instructions:
+=========================
+	
+	 g++ emu.cpp -o emu
+         ./emu test1.asm
+
+	It will ask you for the filename first save the file in same folder as emu.cpp then give the name in .o format
+	After that a Menu driven program will offer you different type of instructions.
+
+Assumptions:
+============
+    * Mnemonic named “data” is always used at the end of assembly code.
+    * In trace, printed register values(or SP or PC) are values after execution of the current line
+
+NOTE:
+=====
+	* Every claim about assembler is already submitted and it satisfies here too (for emulator)
+	* all the commands work as mentioned above.
+
+The emulator: 
+=============
+(some files which were tested)
+1. test1.o
+	compiles successfully with all functionalities working as mentioned above
+
+2. BUBBLE_SORT.o
+	compiles successfully with all functionalities working as mentioned above
