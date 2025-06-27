@@ -24,11 +24,17 @@ This tool is perfect for learning about:
 /project
 │
 ├── assembler.cpp # Assembler source code
+
 ├── emulator.cpp # Emulator source code
+
 ├── sample.asm # Sample assembly file (create your own)
+
 ├── *.log # Log file with errors/warnings
+
 ├── *.lst # Listing file with addresses and hex code
+
 ├── *.o # Binary machine code (output from assembler)
+
 └── README.md
 
 ---
@@ -59,47 +65,30 @@ This tool is perfect for learning about:
 
 ---
 
-🔢 Instruction Set Architecture (ISA)
+## 🔢 Instruction Set Architecture (ISA)
 
-Opcode	Mnemonic	Operand Type
+| Opcode | Mnemonic | Operand Type |
+|--------|----------|---------------|
+| 00     | ldc      | value         |
+| 01     | adc      | value         |
+| 02     | ldl      | offset        |
+| 03     | stl      | offset        |
+| 04     | ldnl     | offset        |
+| 05     | stnl     | offset        |
+| 06     | add      | none          |
+| 07     | sub      | none          |
+| 08     | shl      | none          |
+| 09     | shr      | none          |
+| 0A     | adj      | value         |
+| 0B     | a2sp     | none          |
+| 0C     | sp2a     | none          |
+| 0D     | call     | offset        |
+| 0E     | return   | none          |
+| 0F     | brz      | offset        |
+| 10     | brlz     | offset        |
+| 11     | br       | offset        |
+| 12     | HALT     | none          |
 
-00	ldc	value
-
-01	adc	value
-
-02	ldl	offset
-
-03	stl	offset
-
-04	ldnl	offset
-
-05	stnl	offset
-
-06	add	none
-
-07	sub	none
-
-08	shl	none
-
-09	shr	none
-
-0A	adj	value
-
-0B	a2sp	none
-
-0C	sp2a	none
-
-0D	call	offset
-
-0E	return	none
-
-0F	brz	offset
-
-10	brlz	offset
-
-11	br	offset
-
-12	HALT	none
 
 ---
 
