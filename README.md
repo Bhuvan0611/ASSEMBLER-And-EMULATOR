@@ -22,7 +22,8 @@ This tool is perfect for learning about:
 ## 📁 Project Structure
 
 /project
-│
+
+
 ├── assembler.cpp # Assembler source code
 
 ├── emulator.cpp # Emulator source code
@@ -98,6 +99,7 @@ This tool is perfect for learning about:
 ```bash
 g++ -o asm assembler.cpp
 
+g++ -o asm emulator.cpp
 
 
 
